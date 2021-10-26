@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import AddForm from '../components/AddForm'
+import AddForm from '../components/AddForm';
+import Constants from 'expo-constants';
 
 
 export default function AddScreen({ route }) {
