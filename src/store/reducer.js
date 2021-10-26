@@ -1,13 +1,15 @@
 import data from '../data';
 import types from './types';
 
-const initialState = data;
+const initialState = {
+    data
+}
 
 function addPost(state, payload) {
-    return {
+    return [
         ...state,
         payload
-    }
+    ]
 }
 
 function deletePost(state, id) {
@@ -28,11 +30,13 @@ function editPost(state, payload, id) {
 function reducer(state = initialState, action) {
     switch (action.type) {
         case types.ADD_POST:
-            return addPost(state, action.payload)
+            return addPost(state, action.payload);
         case types.EDIT_POST:
-            return editPost(state, action.payload)
+            return editPost(state, action.payload);
         case types.DELETE_POST:
-            return deletePost(state, action.payload)
+            return deletePost(state, action.payload);
+        default:
+            return state
     }
 }
 
