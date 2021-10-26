@@ -127,7 +127,7 @@ export default function AddForm({ item }) {
             >{error?.imageError}</Text>
 
             <Button
-                title={ item ? 'Edit Post' : 'Add Post'}
+                title={ item ? 'Save Post' : 'Add Post'}
                 onPress={onSubmit}
                 titleStyle={{ letterSpacing: 1, marginLeft: 10, fontSize: 20}}
                 buttonStyle={styles.finishButton}
